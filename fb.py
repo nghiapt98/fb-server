@@ -89,6 +89,10 @@ def facebook_info():
     api = Facebook(cookie)
     info = api.info()
     return jsonify(info)
+@app.route("/")
+def index():
+    return "✅ Flask server đang hoạt động. Gửi POST/GET tới /facebook-info"
+
 
 if __name__ == '__main__':
      app.run(host="0.0.0.0", port=5000)
